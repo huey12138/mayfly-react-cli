@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+  /* font-family: Verdana, Geneva, sans-serif; */
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  height: 100%;
+  min-width: 1280px;
+}
+
+.App {
+  margin: auto;
+  height: 100%;
+  /* max-width: 1280px; */
+}
+
+@media screen {
+}
+
+.layout {
+  height: 100vh;
+}
+
+.layout__content {
+  height: calc(100vh - 80px);
+  padding-top: 16px;
+}
+
+.layout__placeholder {
+  margin: 3em;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.font_bold {
+  font-family: montBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font_semibold {
+  font-family: montSemiBold, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.font_regular {
+  font-family: montRegular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
