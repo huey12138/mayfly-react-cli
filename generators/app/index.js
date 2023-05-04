@@ -18,6 +18,12 @@ module.exports = class extends Generator {
         name: "someAnswer",
         message: "Would you like to enable this option?",
         default: true
+      },
+      {
+        type: "input",
+        name: "name",
+        message: "Your project name.",
+        default: "mayfly-ui"
       }
     ];
 
@@ -28,12 +34,20 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    const { name } = this.props;
+
     this.fs.copy(this.templatePath("**"), this.destinationPath("./"), {
       globOptions: {
         dot: true,
         nodir: true
       }
     });
+
+    this.fs.copyTpl(
+      this.templatePath("package.json"),
+      this.destinationPath("package.json"),
+      { name }
+    );
   }
 
   install() {

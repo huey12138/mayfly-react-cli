@@ -1,7 +1,7 @@
 coverage
 
-**/**/.DS_Store
-**/**/yarn.lock
-**/**/package-lock.json
-**/**/node_modules
-**/**/build
+.DS_Store
+yarn.lock
+package-lock.json
+build
+node_modules
