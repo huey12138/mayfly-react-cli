@@ -18,7 +18,7 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: yarn install
-      - run: CI= yarn build
+      # - run: CI= yarn build
 
       - name: Publish
         run: echo "//registry.npmjs.org/:_authToken=${NPM_SECRETS}" > ~/.npmrc && yarn publish
