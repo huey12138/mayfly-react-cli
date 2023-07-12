@@ -6,7 +6,7 @@ import "react-calendar/dist/Calendar.css";
 import { Button, Upload } from "antd";
 import { AliOSS, UploadFileType } from "@/config/oss";
 import { RcFile } from "antd/lib/upload";
-import { fetchCreateUser } from "./fetch";
+// import { fetchCreateUser } from "./fetch";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();

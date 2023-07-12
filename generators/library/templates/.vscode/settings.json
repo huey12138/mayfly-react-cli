@@ -1,0 +1,55 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "autoFix": true,
+      "language": "typescript"
+    },
+    {
+      "autoFix": true,
+      "language": "typescriptreact"
+    }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.codeActionsOnSave": {
+    // "source.organizeImports": true
+  },
+  "svg.preview.background": "white",
+  "cSpell.words": [
+    "ahooks",
+    "antd",
+    "Archivable",
+    "currentterm",
+    "Customise",
+    "pageable",
+    "semibold",
+    "testid",
+    "Upsert"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "todo-tree.tree.scanMode": "open files",
+  "jest.jestCommandLine": "npm test",
+  "jest.autoRun": {
+    "onSave": "test-file"
+  }
+}

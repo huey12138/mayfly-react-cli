@@ -23,7 +23,7 @@ module.exports = class extends Generator {
         type: "input",
         name: "name",
         message: "Your project name.",
-        default: "mayfly-ui",
+        default: "library",
       },
     ];
 
