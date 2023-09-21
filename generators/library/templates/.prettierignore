@@ -9,12 +9,9 @@ LICENSE
 yarn.lock
 yarn-error.log
 *.sh
-components/*/*.js
-components/*/*.jsx
 .gitignore
 .prettierignore
 .DS_Store
 .editorconfig
 .eslintignore
 **/*.yml
-storybook-static

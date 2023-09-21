@@ -1,8 +1,8 @@
 import { defineConfig } from 'father';
 
 export default defineConfig({
-  esm: { input: 'src' },
-  cjs: { input: 'src' },
+  esm: { input: 'src', output: 'es' },
+  cjs: { input: 'src', output: 'lib' },
   prebundle: {
     deps: {},
   },
