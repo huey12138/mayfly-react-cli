@@ -14,6 +14,7 @@ Then generate your new project:
 
 ```bash
 yo mayfly-cli
+yo mayfly-cli:template-name
 ```
 
 ## Getting To Know Yeoman
