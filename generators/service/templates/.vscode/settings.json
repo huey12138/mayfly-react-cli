@@ -1,0 +1,59 @@
+{
+    "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.autoSaveDelay": 2000,
+  "editor.language.colorizedBracketPairs": [
+    ["[", "]"],
+    ["(", ")"],
+    ["{", "}"]
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.format.enable": true,
+  "[json]": {
+    "editor.fontLigatures": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "svg.preview.background": "white",
+  "cSpell.words": [
+    "ahooks",
+    "antd",
+    "Archivable",
+    "currentterm",
+    "Customise",
+    "pageable",
+    "semibold",
+    "testid",
+    "Upsert"
+  ],
+  "code-runner.executorMap": {
+    "typescript": "ts-node"
+  },
+  "jest.pathToJest": "node --require=ts-node/register ./node_modules/.bin/jest --detectOpenHandles",
+  "jestrunner.jestCommand": "node --require=ts-node/register ./node_modules/.bin/jest --detectOpenHandles"
+}
