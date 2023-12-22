@@ -1,0 +1,14 @@
+log
+node_modules
+yarn.lock
+pnpm-lock.yaml
+.git
+.vscode
+README.zh-CN.md
+README.md
+.editorconfig
+.eslintrc.json
+.gitignore
+.prettierrc.js
+jest.config.js
+test

@@ -10,6 +10,7 @@ import { Context } from '@midwayjs/koa';
 import { InjectEntityModel } from '@midwayjs/typegoose';
 import { Validate } from '@midwayjs/validate';
 import { ReturnModelType } from '@typegoose/typegoose';
+import { ObjectId } from 'mongoose';
 import { ModelUtil } from 'mongoose-model-util';
 import { User } from '../entity/User.entity';
 import { PageInfo } from '../inputs/base.inputs';
@@ -36,7 +37,7 @@ export class APIController {
   userModel: ReturnModelType<typeof User>;
 
   @Get('/user')
-  async user(@Query('id') id) {
+  async user(@Query('id') id: ObjectId) {
     return this.userModel.findById(id);
   }
 

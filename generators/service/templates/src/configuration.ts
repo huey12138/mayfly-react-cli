@@ -5,13 +5,22 @@ import * as validate from '@midwayjs/validate';
 import { join } from 'path';
 // import { DefaultErrorFilter } from './filter/default.filter';
 // import { NotFoundFilter } from './filter/notfound.filter';
+import * as crossDomain from '@midwayjs/cross-domain';
+import * as jwt from '@midwayjs/jwt';
+import * as typegoose from '@midwayjs/typegoose';
+import * as dotenv from 'dotenv';
 import { JwtMiddleware } from './middleware/jwt.middleware';
 import { ReportMiddleware } from './middleware/report.middleware';
+
+dotenv.config();
 
 @Configuration({
   imports: [
     koa,
     validate,
+    jwt,
+    crossDomain,
+    typegoose,
     {
       component: info,
       enabledEnvironment: ['local'],

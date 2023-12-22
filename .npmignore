@@ -3,3 +3,4 @@ generators/app/templates/build/
 generators/app/templates/package-lock.json
 generators/app/templates/yarn.lock
 generators/app/templates/.DS_Store
+generators/app/templates/pnpm-lock.yaml
