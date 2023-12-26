@@ -6,16 +6,16 @@ import { OSSCredential } from '../inputs/oss.inputs';
 
 const jwt: JwtProps = {
   privateSecret: fs.readFileSync(
-    path.resolve(__dirname, '../RS256/rsa_private.pem')
+    path.resolve(__dirname, '../keys/RS256/rsa_private.pem')
   ),
   publicSecret: fs.readFileSync(
-    path.resolve(__dirname, '../RS256/rsa_public.pem')
+    path.resolve(__dirname, '../keys/RS256/rsa_public.pem')
   ),
   expiresIn: 60 * 60,
 };
 
 const koa = {
-  port: 7001,
+  port: 7009,
   // http2: true,
   // key: fs.readFileSync(
   //   path.resolve(__dirname, '../http2/localhost-privkey.pem')
@@ -69,8 +69,8 @@ export default {
         uri: `${DB_CONFIG.getUrl()}/${DB_CONFIG.getDbName()}`,
         options: {
           ignoreUndefined: true,
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
+          // useNewUrlParser: true,
+          // useUnifiedTopology: true,
           directConnection: true,
           ssl: false,
         },

@@ -14,9 +14,6 @@ export class JwtMiddleware implements IMiddleware<Context, NextFunction> {
   @Inject()
   jwtService: JwtService;
 
-  @Inject()
-  jsonWebTokenService: JsonWebTokenService;
-
   resolve() {
     return async (ctx: Context, next: NextFunction) => {
       // test
@@ -29,7 +26,10 @@ export class JwtMiddleware implements IMiddleware<Context, NextFunction> {
         throw new httpError.UnauthorizedError();
       }
       // 从 header 上获取校验信息
-      const parts = ctx.get('authorization').trim().split(' ');
+      const parts = ctx
+        .get('authorization')
+        .trim()
+        .split(' ');
 
       if (parts.length !== 2) {
         throw new httpError.UnauthorizedError();
@@ -47,8 +47,11 @@ export class JwtMiddleware implements IMiddleware<Context, NextFunction> {
           });
           return next();
         } catch (error) {
+          const jsonWebTokenService = await ctx.requestContext.getAsync(
+            JsonWebTokenService
+          );
           //token过期 生成新的token
-          const newToken = await this.jsonWebTokenService.generateToken({});
+          const newToken = await jsonWebTokenService.generateToken({});
           // //将新token放入Authorization中返回给前端
           ctx.set('Authorization', newToken);
         }
